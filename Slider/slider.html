@@ -1,0 +1,89 @@
+<html>
+<head>
+	<script language = "javascript" type = "text/javascript" src = "jquery-1.11.3.js"></script>
+	<title>slider</title>
+	<style >
+		.viewport
+		{
+			width: 300px;
+			height: 100px;
+			overflow: hidden;
+			position: relative;
+		}
+		.slidewrapper
+		{
+			position: absolute;
+			left: 0;
+			top: 0;
+			height: 100px;
+			margin: 0;
+			padding: 0;    
+		}
+		.slide
+		{
+			width: 300px;
+			height: 100px;
+			float: left;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			background: #ff0000;
+		}
+		.second
+		{
+			 background: #00ff00;   
+		}
+		.third
+		{
+			 background: #0000ff;   
+		}
+	</style>
+</head>
+<body>
+	<div class="viewport">
+		<ul class="slidewrapper" data-current="0">
+			<li class="slide">
+				Slide 1
+			</li>
+			<li class="slide second">
+				Slide 2
+			</li>
+			<li class="slide third">
+				Slide 3
+			</li>
+		</ul>
+	</div>
+	<script type = "text/javascript">
+	
+	var slideWidth=300;
+	var sliderTimer;
+	$(function(){
+	$('.slidewrapper').width($('.slidewrapper').children().size()*slideWidth);
+		sliderTimer=setInterval(nextSlide,2000);
+		$('.viewport').hover(function(){
+			clearInterval(sliderTimer);
+		},function(){
+			sliderTimer=setInterval(nextSlide,3000);
+		});
+	});
+
+	function nextSlide(){
+		var currentSlide=parseInt($('.slidewrapper').data('current'));
+		currentSlide++;
+		if(currentSlide>=$('.slidewrapper').children().size())
+		{
+			currentSlide=0;   
+		}
+		$('.slidewrapper').animate({left: -currentSlide*slideWidth},300).data('current',currentSlide);
+	}
+	</script>
+</body>
+</html>
+<!--
+<script type = "text/javascript">
+	function RollPicture ()
+	{
+		
+	}
+</script>
+-->

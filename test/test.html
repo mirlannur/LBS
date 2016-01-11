@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Roll</title>
+</head>
+<body>
+	<div>
+	<?php
+			
+	if ($handle = opendir('Photos')) 
+	{
+		echo "Дескриптор каталога: $handle\n";
+		echo "Файлы:\n";
+
+		/* Именно этот способ чтения элементов каталога является правильным. */
+		while (false !== ($file = readdir($handle))) 
+		{ 
+			echo "$file\n";
+		}
+
+		/* Этот способ НЕВЕРЕН. 
+		while ($file = readdir($handle)) 
+		{ 
+			echo "$file\n";
+		}
+*/
+		closedir($handle);
+	}
+	?>
+	<center>
+		<ul>
+			<li><image title = "img1" alt = "img1" src = "Photos\img1.jpg" Width = "600px" Height = "400px"></li>
+			<li><image title = "img2" alt = "img2" src = "Photos\img2.jpg" Width = "600px" Height = "400px"></li>
+			<li><image title = "img3" alt = "img3" src = "Photos\img3.jpg" Width = "600px" Height = "400px"></li>
+			<li><image title = "img4" alt = "img4" src = "Photos\img4.jpg" Width = "600px" Height = "400px"></li>
+			<li><image title = "img5" alt = "img5" src = "Photos\img5.jpg" Width = "600px" Height = "400px"></li>
+			<li><image title = "img6" alt = "img6" src = "Photos\img6.jpg" Width = "600px" Height = "400px"></li>
+		</ul>
+	</center>
+	</div>
+</body>
+</html>
+<!--
+<script type = "text/javascript">
+	function RollPicture ()
+	{
+		
+	}
+</script>
+-->

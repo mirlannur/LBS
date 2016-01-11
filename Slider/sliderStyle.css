@@ -1,0 +1,30 @@
+body
+{
+	background-color: #999;
+}
+.back
+{
+	height: 225px;
+	background-color: #000;
+}
+.slidewrapper
+{
+	position: absolute;
+	height: 500px;
+	display: block;
+}
+.slide
+{
+	width: 600px;
+	height: 400px;
+	list-style: none;
+	background-color: #bbb;
+	margin-right: 15px;
+	border: 2px;
+	border-color: #000;
+	position: absolute;
+	box-shadow: 10px -10px  20px #222;
+	top: 50px;
+	left: 300px;
+	position: absolute;
+}

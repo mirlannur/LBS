@@ -1,0 +1,120 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+}
+.menu
+{
+	height: 70px;
+	display: block;
+	background-color: #000;
+	z-index:1000;
+}
+.left
+{
+	top: 100px;
+	float: left;
+	width: 180px;
+	height: 1000px;
+	display: inline-block;
+	background-color: #00f;
+	z-index:1000;
+}
+.center
+{
+	display: inline-block;
+}
+.right
+{	
+	top: 70px;
+	float: right;
+	width: 180px;
+	height: 10000px;
+	display: inline-block;
+	background-color: #0f0;
+	z-index:100;
+}
+#slider
+{
+}
+
+#slogan
+{
+	margin-top: 22px;
+	margin-left: 5px;
+	display: inline-block;
+	float: left;
+}
+#aboutUs 
+{
+	margin-top: 22px;
+	display: inline-block;
+	float: right;
+}
+#contacts
+{
+	margin-top: 22px;
+	display: inline-block;
+	float: right;
+}
+#news
+{
+	margin-top: 22px;
+	display: inline-block;
+	float: right;
+}
+#search
+{
+	
+	margin-top: 22px;
+	margin-right: 270px;
+	display: inline-block;
+	float: right;
+}
+#searchForm
+{
+	position: absolute;
+	margin-left: 83px;
+	margin-top: 2px;
+	float: left;
+}
+#searchInput
+{
+	height: 16px;
+	border: 0;
+	width: 140px;
+}
+#searchB
+{
+	width: 20px;
+	opacity: 0;
+}
+#searchBot
+{
+	display: inline-block;
+	position: absolute;
+	right: 25px;
+	top: 27px;
+	float: left;
+	width: 17px;
+	height: 17px;
+}
+#menu2
+{
+	overflow: hidden;
+}
+.menu2P
+{
+	display: inline-block;
+	float: left;
+}
+.mid
+{
+	float: left;
+	margin-top: -22px;
+}
+
+
+
+
+
